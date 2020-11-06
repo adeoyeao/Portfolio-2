@@ -1,7 +1,6 @@
 import Copy from "../components/Copy"
 import Paragraph from "../components/Paragraph"
 import Heading from "../components/Heading"
-import HomeAnimation from "../components/HomeAnimation"
 import Button from "../components/Button"
 
 import { useSelector, useDispatch } from "react-redux"
@@ -37,9 +36,6 @@ const IndexLayout = () => {
                   <Button 
                   route="projects"
                   name="View Recent Projects"/>
-                  </div>
-                  <div className={styles.heroimage} >
-                  <HomeAnimation />
                   </div>
             </section>
       )

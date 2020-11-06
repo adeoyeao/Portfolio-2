@@ -1,0 +1,12 @@
+.folder {
+      min-width: 230px;
+      width: 100%;
+      max-width: 350px;
+      height: 150px;
+      border: 8px solid rgb(186, 199, 223);
+      cursor: pointer;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+}

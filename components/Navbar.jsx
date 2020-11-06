@@ -55,45 +55,45 @@ const Navbar = () => {
 
       return (
             <nav className={styles.navbar}>
-                  <span>
+                  <span onClick = { () => handleClick("/") }>
                         <HomeIcon 
                         style={iconStyle.home} 
                         onMouseEnter={ () => handleMouseOver("home") }
                         onMouseLeave={ () => handleMouseOut("home") }
-                        onClick = { () => handleClick("/") }
                         />
+                        <h4>HOME</h4>
                   </span>
-                  <span>
+                  <span onClick = { () => handleClick("/about") }  >
                         <PersonIcon 
                         style={iconStyle.about}
                         onMouseEnter={ () => handleMouseOver("about") }
-                        onMouseLeave={ () => handleMouseOut("about") } 
-                        onClick = { () => handleClick("/about") }   
+                        onMouseLeave={ () => handleMouseOut("about") }  
                         />
+                        <h4>ABOUT</h4>
                   </span>
-                  <span>
+                  <span onClick = { () => handleClick("/skills") } >
                         <ImportantDevicesIcon 
                         style={iconStyle.skills}
                         onMouseEnter={ () => handleMouseOver("skills") }
                         onMouseLeave={ () => handleMouseOut("skills") }  
-                        onClick = { () => handleClick("/skills") } 
                         />
+                        <h4>SKILLS</h4>
                   </span>
-                  <span>
+                  <span onClick = { () => handleClick("/projects") } >
                         <CreateIcon 
                         style={iconStyle.projects}
                         onMouseEnter={ () => handleMouseOver("projects") }
                         onMouseLeave={ () => handleMouseOut("projects") } 
-                        onClick = { () => handleClick("/projects") }    
                         />
+                        <h4>PROJECTS</h4>
                   </span>
-                  <span>
+                  <span onClick = { () => handleClick("/contact") }>
                         <ChatIcon 
                         style={iconStyle.contact}
                         onMouseEnter={ () => handleMouseOver("contact") }
                         onMouseLeave={ () => handleMouseOut("contact") }
-                        onClick = { () => handleClick("/contact") } 
                         />
+                        <h4>CONTACT</h4>
                   </span>
             </nav>
       )

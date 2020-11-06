@@ -1,8 +1,10 @@
-import Copy from "../components/Copy"
+import Folder from "../components/Folder"
 
 import { useSelector, useDispatch } from "react-redux"
 import { pageEnter, pageExit } from "../redux/actions"
 import { useEffect } from "react"
+
+import styles from "../styles/layouts/projects.module.scss"
 
 const ProjectsLayout = () => {
       const dispatch = useDispatch()
@@ -15,12 +17,12 @@ const ProjectsLayout = () => {
       }, [shrink])
 
       return (
-            <section style={shrinkStyle}>
-                  <div>
-                  <Copy 
-                  type="primary"
-                  head="Projects"
-                  text="Here are my projects."/>
+            <section style={shrinkStyle}
+            className={styles.projects}>
+                  <div className={styles.folders}>
+                        <Folder type="application"/>
+                        <Folder type="website"/>
+                        <Folder type="dashboards"/>
                   </div>
             </section>
       )

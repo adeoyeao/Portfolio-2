@@ -6,14 +6,23 @@
       grid-template-columns: repeat(5, 1fr);
       width: 100%;
       place-items: center;
-      background: rgba(28, 28, 28, 0.75);
+      background: #1c1c1c;
+
+      span {
+            display: grid;
+            justify-items: center;
+            cursor: pointer;
+            &:hover h4 {
+            color: #2352FA;
+            }
+      }
 }
 
 @media screen and (min-width: 700px) {
       .navbar {
             position: relative;
             top: 0;
-            grid-gap: 2rem;
+            grid-gap: 1.5rem;
             background: none;
       }
 }

@@ -1,8 +1,44 @@
 .logo {
+      display: grid;
       width: 4rem;
       height: 4rem;
-      background: black;
-      display: grid;
       place-items: center;
+      background-color: black;
+
+      svg {
+            grid-row: 1/2;
+            grid-column: 1/2;
+      }
+
+      svg {
+            width: 80%;
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100%;
+            animation: draw 5s ease-in-out alternate infinite;
+            stroke: #8F9491;
+      }
 }
 
+@keyframes draw {
+      0% {
+            stroke-dashoffset: 100%;
+      }
+      100% {
+            stroke-dashoffset: 0%;
+      }
+}
+
+@keyframes pulse {
+      0% {
+            width: 60%;
+            height: 60%
+      }
+      50% {
+            width: 50%;
+            height: 50%
+      }
+      100% {
+            width: 60%;
+            height: 60%;
+      }
+}

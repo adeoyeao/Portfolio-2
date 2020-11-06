@@ -11,7 +11,7 @@ const Socials = () => {
       return (
             <span className={styles.socials}>
                   <a href="https://github.com/adeoyeao/" target="_blank"><GitHubIcon style={socialStyle}/></a>
-                  <a href="www.linkedin.com/in/alfred-adeoye-37509b81" target="_blank"><LinkedInIcon style={socialStyle} /></a>
+                  <a href="https://www.linkedin.com/in/alfred-adeoye-37509b81" target="_blank"><LinkedInIcon style={socialStyle} /></a>
             </span>
       )
 }
