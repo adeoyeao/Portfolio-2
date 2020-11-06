@@ -1,0 +1,30 @@
+.socials {
+      display: none;
+
+      div {
+            width: 1.5rem;
+            height: 1.5rem;
+            background: blue;
+      }
+}
+
+@media screen and (min-width: 700px) {
+     .socials {
+           display: grid;
+           grid-template-columns: 1fr 1fr;
+           grid-gap: 1rem;
+           place-items: center;
+           place-self: center end;
+           padding-right: 1rem;
+     }
+}
+
+@media screen and (min-width: 1300px) {
+      .socials {
+            padding: 0;
+            padding-bottom: 1rem;
+            grid-template-columns: unset;
+            grid-template-rows: 1fr 1fr;
+            place-self: end center;
+      }
+}

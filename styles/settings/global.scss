@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&Roboto+Condenseddisplay=swap');
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Cabin", sans-serif;
+}
+
+main {
+      display: grid;
+      place-items: center;
+      background: #06001C;
+      padding-top: 4rem;
+}
+
+section {
+      background: #2D2D34;
+      height: 100%;
+      width: 100%;
+      // transform: scale(.75, .75)
+}
+
+
+h1,
+h2,
+h3 {
+      color: #2352FA;
+      font-weight: bold;
+      font-family: "Roboto Condensed";
+}
+
+h1 {
+      font-size: 32px;
+}
+
+h2 {
+      font-size: 24px;
+}
+
+h3 {
+      font-size: 18px
+}
+
+p {
+      color: #E7EBC5;
+      font-size: 14px;
+      letter-spacing: 0.25rem;
+}
+
+@media screen and (min-width: 700px) {
+      h1 {
+            font-size: 60px;
+      }
+
+      h2 {
+            font-size: 48px;
+      }
+
+      h3 {
+            font-size: 24px
+      }
+
+      p {
+            font-size: 18px;
+      }
+}
+
+@media screen and (min-width: 1300px) {
+      main {
+            padding: 0;
+            padding-left: 4rem;
+      }
+}
