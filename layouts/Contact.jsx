@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { pageEnter, pageExit } from "../redux/actions"
 import { useEffect } from "react"
 
-const AboutLayout = () => {
+const ContactLayout = () => {
       const dispatch = useDispatch()
       
       const shrink = useSelector(state => state.transition.shrink)
@@ -19,11 +19,11 @@ const AboutLayout = () => {
                   <div>
                   <Copy 
                   type="primary"
-                  head="Skills"
-                  text="I utilise HTML, CSS (Flexbox and CSS Grid) and JavaScript (React) to create modern and minimalist user interfaces. I am adept at developing robust backend functionality and use Node.JS (Express) for building servers and MongoDB for database management. "/>
+                  head="Contact"
+                  text="Call me beep me how you gonna reach me."/>
                   </div>
             </section>
       )
 }
 
-export default AboutLayout
+export default ContactLayout

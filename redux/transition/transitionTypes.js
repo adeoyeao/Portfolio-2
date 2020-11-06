@@ -1,0 +1,4 @@
+const PAGE_ENTER = "PAGE_ENTER"
+const PAGE_EXIT = "PAGE_EXIT"
+
+export { PAGE_ENTER, PAGE_EXIT }
