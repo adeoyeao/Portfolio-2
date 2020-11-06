@@ -1,0 +1,40 @@
+.index {
+      padding: 2rem 5vw;
+      padding-bottom: 6rem;
+      display: grid;
+      grid-gap: 2rem;
+      grid-template-rows: auto 1fr;
+      align-items: center;
+      border: 8px solid black;
+      background-image: url("../../public/images/dark-geometric.png");
+      text-align: center;
+
+      .heroimage {
+            width: 100%;
+            height: 100%;
+            background: url("../../public/images/coding.jpg");
+            background-size: cover;
+            border: 8px solid black;
+            position: relative;
+      }
+}
+
+@media screen and (min-width: 700px) {
+      .index {
+            padding: 2rem 5vw;
+      }
+}
+
+@media screen and (min-width: 1200px) {
+      .index {
+            text-align: left;
+            padding: 0;
+            padding-left: 5vw;
+            grid-template-rows: unset;
+            grid-template-columns: 1fr 1fr;
+            .heroimage {
+                  border: none;
+                  border-left: 8px solid black;
+            }
+      }
+}

@@ -12,7 +12,7 @@ const AboutLayout = () => {
 
       useEffect(() => { 
             setTimeout(() => dispatch(pageEnter()), 1500)
-      }, [])
+      }, [shrink])
 
       return (
             <section style={shrinkStyle}>
