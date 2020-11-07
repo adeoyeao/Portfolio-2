@@ -7,12 +7,12 @@
       padding: 1rem;
       cursor: pointer;
       color: white;
-      background: #06001C;
-      border: 2px solid #06001C;
+      background:  #06001C;
       &:hover {
-            background: rgba(255, 255, 255, 0.35);
+            background: linear-gradient(90deg, #7b4397, #dc2430);
             color: #06001C;
             font-weight: bold;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3)
       }
-      transition: background 0.5s linear, color 0.5s linear;
+      transition: font-weight 0.5s linear, color 0.5s linear;
 }

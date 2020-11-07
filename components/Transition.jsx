@@ -30,7 +30,7 @@ const Transition = () => {
             style={transitionStyle}
             className={styles.transition}> 
                   <img src="/icons/logo-secondary.svg" />
-                  <p>What a wonderful day</p>
+                  <p>[Quote Generator?]</p>
                   <span />
             </div> }
             </div>
