@@ -1,6 +1,7 @@
 import Copy from "../components/Copy"
 import Button from "../components/Button"
 import Paragraph from "../components/Paragraph"
+import Job from "../components/Job"
 
 import { useSelector, useDispatch } from "react-redux"
 import { pageEnter, pageExit } from "../redux/actions"
@@ -36,7 +37,24 @@ const AboutLayout = () => {
                   route="/projects"
                   name="View More Projects"/>
                   </div>
-                  <div />
+                  <div className={styles.carousel}> 
+                        <Job 
+                        company="Freelance"
+                        job="Web Developer"
+                        years="2020~"/>
+                        <Job 
+                        company="Linklaters"
+                        job="Project Manager"
+                        years="2019-20"/>
+                        <Job 
+                        company="EY"
+                        job="Project Manager"
+                        years="2016-19"/>
+                        <Job 
+                        company="TradeRisks"
+                        job="Risk Analyst"
+                        years="2015-16"/>
+                  </div>
             </section>
       )
 }
