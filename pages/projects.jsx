@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import Head from "next/head"
 
 import Header from "../layouts/Header"
 import ProjectsLayout from "../layouts/Projects"
@@ -25,11 +24,6 @@ const Projects = () => {
 
       return (
             <main style={mainStyle}>
-                  <Head>
-                        <title>Alfred Adeoye</title>
-                        <link rel="icon" type="image/svg" href="/icons/favicon.svg" />
-                  </Head>
-                  <Header />
                   <ProjectsLayout />
             </main>
       )

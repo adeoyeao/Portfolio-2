@@ -3,6 +3,11 @@
       align-items: center;
       grid-gap: 2rem;
       text-align: center;
+
+      .tagcloud {
+            display: grid;
+            place-items: center;
+      }
 }
 
 @media screen and (min-width: 700px) {

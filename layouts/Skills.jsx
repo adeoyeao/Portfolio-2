@@ -1,6 +1,7 @@
 import Copy from "../components/Copy"
 import Paragraph from "../components/Paragraph"
 import Button from "../components/Button"
+import TagSphere from "../components/TagSphere"
 
 import { useSelector, useDispatch } from "react-redux"
 import { pageEnter, pageExit } from "../redux/actions"
@@ -26,15 +27,17 @@ const AboutLayout = () => {
                   <Copy 
                   type="primary"
                   head="Skills"
-                  text="I utilise HTML, CSS (Flexbox and CSS Grid) and JavaScript (React) to create modern and minimalist user interfaces.  "/>
+                  text="On the front end, I primarily use React with Redux to create modern and minimalist user interfaces."/>
                   <br />
                   <Paragraph 
-                  text="I am adept at developing robust backend functionality and use Node.JS (Express) for building servers and MongoDB for database management."/>
+                  text="I am adept at building React applications using Next.js with custom Express.js servers for, amongst other things, server side rendering, user authenticaiton and connecting to databases and external APIs."/>
                   <Button 
                   route="/projects"
                   name="See What I Can Do"/>
                   </div>
-                  <div />
+                  <div className={styles.tagcloud}>
+                        <TagSphere />
+                  </div>
             </section>
       )
 }
