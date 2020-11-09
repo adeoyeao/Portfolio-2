@@ -22,7 +22,7 @@ const TagSphere = (props) => {
                   window.removeEventListener("resize", handleResize)
                   tagCloud.destroy()
             })
-      }, [innerWidth])
+      }, [innerWidth, props.skills])
 
       return (
             <div className="tagsphere" />

@@ -1,14 +1,29 @@
 import { useState, useEffect } from "react"
-import { GetServerSideProps } from "next"
+import useSWR from "swr"
 import Header from "../layouts/Header"
 import ProjectsLayout from "../layouts/Projects"
 
-const Projects = ({ projects }) => {
+const Projects = () => {
       const [ viewHeight, setViewHeight ] = useState()
+      const [ projects , setProjects ] = useState([])
 
       const handleResize = () => {
             setViewHeight(window.innerHeight)
       }
+
+      const fetcher = (...args) => 
+            fetch(...args)
+            .then(res => res.json())
+            .then(data => {
+                  setProjects(data.reverse())
+                  console.log(data)
+            })
+
+      const getStaticData = () => {
+            const { data, err } = useSWR("/projectdata", fetcher)
+      }
+
+      getStaticData()
 
       useEffect(() => {
             handleResize()
@@ -24,26 +39,9 @@ const Projects = ({ projects }) => {
 
       return (
             <main style={mainStyle}>
-                  <ProjectsLayout projects={projects.reverse()}/>
+                  <ProjectsLayout projects={projects}/>
             </main>
       )
-}
-
-export async function getServerSideProps() {
-      const res = await fetch("https://alfred-adeoye.herokuapp.com/project", {
-            method: "POST",
-            headers: {
-                  "content-type": "application/json"
-            },
-            body: JSON.stringify({ message: "Testing"})
-      })
-
-      const projects = await res.json()
-      return {
-            props: {
-                  projects
-            }
-      }
 }
 
 export default Projects

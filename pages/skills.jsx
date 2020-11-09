@@ -1,14 +1,29 @@
 import { useState, useEffect } from "react"
-import { GetServerSideProps } from "next"
 import Header from "../layouts/Header"
 import SkillsLayout from "../layouts/Skills"
+import useSWR from "swr"
 
-const Skills = ({ skills }) => {
+const Skills = () => {
       const [ viewHeight, setViewHeight ] = useState()
+      const [ skills, setSkills ] = useState([])
+
+      const fetcher = (...args) => 
+            fetch(...args)
+            .then(res => res.json())
+            .then(data => {
+                  setSkills(data)
+                  console.log(data)
+            })
+
+      const getStaticData = () => {
+            const { data, err } = useSWR("/skilldata", fetcher)
+      }
 
       const handleResize = () => {
             setViewHeight(window.innerHeight)
       }
+
+      getStaticData()
 
       useEffect(() => {
             handleResize()
@@ -16,7 +31,8 @@ const Skills = ({ skills }) => {
             return () => {
                   window.removeEventListener("resize", handleResize)
             }
-      }, [])
+      })
+
 
       const mainStyle = {
             minHeight: `${viewHeight}px`
@@ -27,24 +43,6 @@ const Skills = ({ skills }) => {
                   <SkillsLayout skills={skills}/>
             </main>
       )
-}
-
-export async function getServerSideProps() {
-      const res = await fetch("https://alfred-adeoye.herokuapp.com/skill", {
-            method: "POST",
-            headers: {
-                  "content-type": "application/json"
-            },
-            body: JSON.stringify({ message: "Testing"})
-      })
-
-      const skills = await res.json()
-
-      return {
-            props: {
-                  skills,
-            }
-      }
 }
 
 export default Skills

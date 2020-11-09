@@ -9,6 +9,12 @@
       }
       cursor: pointer;
       position: fixed;
-      top: 1rem;
+      top: 5rem;
       right: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+      .closebutton {
+            top: 1rem;
+      }
 }
