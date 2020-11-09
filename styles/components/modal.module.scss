@@ -1,0 +1,10 @@
+.modal {
+      background: linear-gradient(90deg, #06001C, #262D34 100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: grid;
+      place-items: center;
+      animation: gradient 1.5s ease-in-out alternate infinite
+}
