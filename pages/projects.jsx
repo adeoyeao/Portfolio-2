@@ -30,7 +30,7 @@ const Projects = ({ projects }) => {
 }
 
 export async function getStaticProps() {
-      const res = await fetch("http://localhost:5000/project")
+      const res = await fetch("https://alfred-adeoye.herokuapp.com/project")
       const projects = await res.json()
       return {
             props: {

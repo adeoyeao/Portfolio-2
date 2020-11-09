@@ -32,7 +32,7 @@ const ContactLayout = () => {
                   <Copy 
                   type="primary"
                   head="Contact Me"
-                  text="I am currently available for freelance opportunities so please feel free to drop me an email via the link below."/>
+                  text="I am currently available for freelance opportunities so please feel free to email me via the link below."/>
                   <a href="mailto:alfred.adeoye@cantab.net" className={styles.email}>Let's Get In Touch</a>
                   </div>
                   <div className={styles.socialbuttons}> 

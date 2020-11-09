@@ -30,7 +30,7 @@ const SkillsLayout = (props) => {
                   text="On the front end, I primarily use React with Redux to create modern and minimalist user interfaces."/>
                   <br />
                   <Paragraph 
-                  text="I am adept at building React applications using Next.js with custom Express.js servers for, amongst other things, server side rendering, user authenticaiton and connecting to databases and external APIs."/>
+                  text="I am adept at building React applications using Next.js with custom Express.js servers for, amongst other things, server side rendering, user authentication and connecting to databases and external APIs."/>
                   <Button 
                   route="/projects"
                   name="See What I Can Do"/>
