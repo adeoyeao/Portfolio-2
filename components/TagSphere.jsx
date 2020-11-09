@@ -5,7 +5,7 @@ const TagSphere = () => {
       const [ innerWidth, setInnerWidth ] = useState()
       const tagWidth = innerWidth < 700 ? 120 : innerWidth < 1200 ? 150 : 200
 
-      const myTags = ["HTML", "CSS", "JavaScript", "React", "Redux", "SASS", "Node.js", "npm", "Express.js", "Next.js", "MongoDB", "Git", "Agile PM", "REST", "APIs", "JSON"]
+      const myTags = ["HTML", "CSS", "JavaScript", "Adobe XD", "React", "Redux", "React Hooks", "SASS", "EJS", "Node.js", "npm", "Express.js", "Next.js", "MongoDB", "Git", "Agile PM", "REST", "APIs", "JSON", "SQL", "Linux"]
 
       const handleResize = () => { 
             setInnerWidth(window.innerWidth)
@@ -14,7 +14,6 @@ const TagSphere = () => {
       useEffect(() => {
             handleResize()
             window.addEventListener("resize", handleResize)
-            console.log(innerWidth, tagWidth)
             const tagCloud = TagCloud(".tagsphere", myTags, {
                   radius: tagWidth,
             })
