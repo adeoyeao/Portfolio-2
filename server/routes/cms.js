@@ -48,13 +48,13 @@ router.post("/project", (req, res) => {
       res.json({ message: `${project} Added.`})
 })
 
-router.get("/skill", (req, res) => {
+router.post("/skilldata", (req, res) => {
       skillModel.find({}, (err, skill) => {
             err ? console.error(err) : res.json(skill)
       })
 })
 
-router.get("/project", (req, res) => {
+router.post("/projectdata", (req, res) => {
       projectModel.find({}, (err, skill) => {
             err ? console.error(err) : res.json(skill)
       })

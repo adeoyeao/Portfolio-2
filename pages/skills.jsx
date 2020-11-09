@@ -31,7 +31,14 @@ const Skills = ({ skills }) => {
 
 
 export async function getStaticProps() {
-      const res = await fetch("http://alfred-adeoye.herokuapp.com/skill")
+      const res = await fetch("https://alfred-adeoye.herokuapp.com/skill", {
+            method: "POST",
+            headers: {
+                  "content-type": "application/json"
+            },
+            body: JSON.stringify({ message: "Testing"})
+      })
+
       const skills = await res.json()
 
       return {
