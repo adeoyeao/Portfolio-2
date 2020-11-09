@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { GetStaticProps } from "next"
+import { GetServerSideProps } from "next"
 import Header from "../layouts/Header"
 import SkillsLayout from "../layouts/Skills"
 
@@ -29,8 +29,7 @@ const Skills = ({ skills }) => {
       )
 }
 
-
-export async function getStaticProps() {
+export async function getServerSideProps() {
       const res = await fetch("https://alfred-adeoye.herokuapp.com/skill", {
             method: "POST",
             headers: {
