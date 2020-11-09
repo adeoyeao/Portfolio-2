@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .input {
       appearance: none;
       border: none;
@@ -13,4 +14,21 @@
       display: block;
       width: 100%;
       max-width: 20rem;
+=======
+.input {
+      appearance: none;
+      border: none;
+      outline: none;
+      border-left: 1px solid #8f9491;
+      border-right: 1px solid #8f9491;
+      padding: 1rem;
+      background: none;
+      color: #E7EBC5;
+      &::placeholder {
+            color: #E7EBC5;
+      }
+      display: block;
+      width: 100%;
+      max-width: 20rem;
+>>>>>>> ae3b55c0fda5c438f46c6b4cebd6008143645b37
 }

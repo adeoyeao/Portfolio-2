@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Amaranth&display=swap');
 
 * {
@@ -89,4 +90,97 @@ p {
       section {
             padding: 0 5vw;
       }
+=======
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Amaranth&display=swap');
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Cabin", sans-serif;
+}
+
+main {
+      display: grid;
+      place-items: center;
+      background: #06001C;
+      padding-top: 4rem;
+}
+
+section {
+      background-color: #2352FA;
+      background-image: url("../../public/images/dark-geometric.png");
+      height: 100%;
+      width: 100%;
+      transition: transform 0.5s ease-in-out;
+      border: 8px solid black;
+      padding: 2rem 5vw;
+      padding-bottom: 6rem;
+      position: relative;
+}
+
+h1,
+h2,
+h3 {
+      color: #06001C;
+      font-weight: 900;
+      font-family: "Amaranth"
+}
+
+h4 {
+      font-size: 10px;
+      text-align: center;
+      color: slategrey;
+}
+
+h1 {
+      font-size: 48px;
+}
+
+h2 {
+      font-size: 32px;
+}
+
+h3 {
+      font-size: 24px
+}
+
+p {
+      color: #E7EBC5;
+      font-size: 14px;
+      letter-spacing: 1px;
+}
+
+@media screen and (min-width: 700px) {
+      h1 {
+            font-size: 80px;
+      }
+
+      h2 {
+            font-size: 64px;
+      }
+
+      h3 {
+            font-size: 24px
+      }
+
+      p {
+            font-size: 18px;
+      }
+
+      section {
+            padding: 2rem 5vw;
+      }
+}
+
+@media screen and (min-width: 1200px) {
+      main {
+            padding: 0;
+            padding-left: 4rem;
+      }
+
+      section {
+            padding: 0 5vw;
+      }
+>>>>>>> ae3b55c0fda5c438f46c6b4cebd6008143645b37
 }
