@@ -31,7 +31,7 @@ const Skills = ({ skills }) => {
 
 
 export async function getStaticProps() {
-      const res = await fetch("https://alfred-adeoye.herokuapp.com/skill")
+      const res = await fetch("http://alfred-adeoye.herokuapp.com/skill")
       const skills = await res.json()
 
       return {
