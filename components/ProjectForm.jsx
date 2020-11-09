@@ -25,7 +25,16 @@ const ProjectForm = (props) => {
 
       const handleSubmit = (e) => {
             e.preventDefault()
-            if(input !== "") {
+            if(input !== {
+            project: "",
+            category: "",
+            description: "",
+            code: "",
+            technology1: "",
+            technology2: "",
+            technology3: "",
+            website: ""
+            }) {
                   fetch("/project", {
                         method: "POST",
                         headers: {
