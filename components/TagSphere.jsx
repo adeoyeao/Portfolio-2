@@ -1,15 +1,16 @@
 import TagCloud from "../public/scripts/cloud"
 import { useState, useEffect } from "react"
 
-const TagSphere = () => {
+const TagSphere = (props) => {
       const [ innerWidth, setInnerWidth ] = useState()
       const tagWidth = innerWidth < 700 ? 120 : innerWidth < 1200 ? 150 : 200
-
-      const myTags = ["HTML", "CSS", "JavaScript", "Adobe XD", "React", "Redux", "React Hooks", "SASS", "EJS", "Node.js", "npm", "Express.js", "Next.js", "MongoDB", "Git", "Agile PM", "REST", "APIs", "JSON", "SQL", "Linux"]
 
       const handleResize = () => { 
             setInnerWidth(window.innerWidth)
       }
+
+      const myTags = []
+      props.skills.forEach(obj => myTags.push(obj.skill))
 
       useEffect(() => {
             handleResize()

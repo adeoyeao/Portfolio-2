@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
-
+import { GetStaticProps } from "next"
 import Header from "../layouts/Header"
 import SkillsLayout from "../layouts/Skills"
 
-const Skills = () => {
+const Skills = ({ skills }) => {
       const [ viewHeight, setViewHeight ] = useState()
 
       const handleResize = () => {
@@ -24,9 +24,21 @@ const Skills = () => {
 
       return (
             <main style={mainStyle}>
-                  <SkillsLayout />
+                  <SkillsLayout skills={skills}/>
             </main>
       )
+}
+
+
+export async function getStaticProps() {
+      const res = await fetch("http://localhost:5000/skill")
+      const skills = await res.json()
+
+      return {
+            props: {
+                  skills,
+            }
+      }
 }
 
 export default Skills

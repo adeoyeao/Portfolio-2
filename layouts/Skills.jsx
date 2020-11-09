@@ -9,7 +9,7 @@ import { useEffect } from "react"
 
 import styles from "../styles/layouts/skills.module.scss"
 
-const AboutLayout = () => {
+const SkillsLayout = (props) => {
       const dispatch = useDispatch()
       
       const shrink = useSelector(state => state.transition.shrink)
@@ -36,10 +36,10 @@ const AboutLayout = () => {
                   name="See What I Can Do"/>
                   </div>
                   <div className={styles.tagcloud}>
-                        <TagSphere />
+                        <TagSphere skills={props.skills}/>
                   </div>
             </section>
       )
 }
 
-export default AboutLayout
+export default SkillsLayout

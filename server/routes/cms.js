@@ -24,11 +24,9 @@ router.post("/project", (req, res) => {
       const project = req.body.project
       const category = req.body.category
       const description = req.body.description
-      const technologies = [
-            req.body.technology1,
-            req.body.technology2,
-            req.body.technology3
-      ]
+      const technology1 = req.body.technology1
+      const technology2 = req.body.technology2  
+      const technology3 = req.body.technology3
       const code = req.body.code
       const website = req.body.website
 
@@ -36,7 +34,9 @@ router.post("/project", (req, res) => {
             project: project,
             category: category,
             description: description,
-            technology: technologies,
+            technology1: technology1,
+            technology2: technology2,
+            technology3: technology3,
             code: code,
             website: website
       })
@@ -46,6 +46,18 @@ router.post("/project", (req, res) => {
       .catch(err => console.error(err))
 
       res.json({ message: `${project} Added.`})
+})
+
+router.get("/skill", (req, res) => {
+      skillModel.find({}, (err, skill) => {
+            err ? console.error(err) : res.json(skill)
+      })
+})
+
+router.get("/project", (req, res) => {
+      projectModel.find({}, (err, skill) => {
+            err ? console.error(err) : res.json(skill)
+      })
 })
 
 module.exports = router

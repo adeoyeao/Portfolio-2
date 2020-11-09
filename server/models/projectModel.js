@@ -15,9 +15,17 @@ const ProjectSchema = mongoose.Schema({
             type: String,
             required: true,
       },
-      technologies: {
-            type: Array,
-            required: true
+      technology1: {
+            type: String,
+            reqired: true
+      },
+      technology2: {
+            type: String,
+            reqired: true
+      },
+      technology3: {
+            type: String,
+            reqired: true
       },
       code: {
             type: String,

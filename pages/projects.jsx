@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
-
+import { GetStaticProps } from "next"
 import Header from "../layouts/Header"
 import ProjectsLayout from "../layouts/Projects"
 
-const Projects = () => {
+const Projects = ({ projects }) => {
       const [ viewHeight, setViewHeight ] = useState()
 
       const handleResize = () => {
@@ -24,9 +24,19 @@ const Projects = () => {
 
       return (
             <main style={mainStyle}>
-                  <ProjectsLayout />
+                  <ProjectsLayout projects={projects.reverse()}/>
             </main>
       )
+}
+
+export async function getStaticProps() {
+      const res = await fetch("http://localhost:5000/project")
+      const projects = await res.json()
+      return {
+            props: {
+                  projects
+            }
+      }
 }
 
 export default Projects

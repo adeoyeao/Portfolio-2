@@ -21,7 +21,8 @@ const Folder = (props) => {
       return (
             <div 
             className={styles.folder}
-            style={folderStyle}>
+            style={folderStyle}
+            onClick={() => props.handleClick(props.type)}>
                   { props.type === "application" ? 
                   <AppsIcon style={iconStyle} /> :
                   props.type === "website" ? 

@@ -1,17 +1,26 @@
 .projects {
   display: grid;
   place-items: center;
+  padding: 2rem 5vw;
 
   .folders {
     display: grid;
     grid-gap: 4rem;
   }
+
+  .projectCards {
+  width: 80vw;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+}
 }
 
 @media screen and (min-width: 1200px) {
   .projects {
     .folders {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(150px, 1fr));
     }
   }
 }
+
