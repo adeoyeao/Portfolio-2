@@ -3,6 +3,8 @@
            grid-template-columns: 1fr 1fr;
            grid-gap: 1rem;
            place-items: center;
+            align-self: center;
+            justify-self: end;
            place-self: center end;
            padding-right: 1rem;
       div {
@@ -18,6 +20,8 @@
             padding-bottom: 1rem;
             grid-template-columns: unset;
             grid-template-rows: 1fr 1fr;
+            justify-self: center;
+            align-self: end;
             place-self: end center;
       }
 }

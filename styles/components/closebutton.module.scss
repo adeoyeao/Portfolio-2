@@ -3,6 +3,8 @@
       height: 2rem;
       background: #8F9491;
       display: grid;
+      align-items: center;
+      justify-items: center;
       place-items: center;
       &:hover {
             box-shadow: 0px 0px 5px 7px rgba(0, 0, 0, 0.3)
