@@ -4,10 +4,10 @@ import Header from "../layouts/Header"
 import ContactLayout from "../layouts/Contact"
 
 const Contact = () => {
-      const [ viewHeight, setViewHeight ] = useState()
+      const [ viewHeight, setViewHeight ] = useState(`100vh`)
 
       const handleResize = () => {
-            setViewHeight(window.innerHeight)
+            setViewHeight(`${window.innerHeight}px`)
       }
 
       useEffect(() => {
@@ -19,7 +19,7 @@ const Contact = () => {
       }, [])
 
       const mainStyle = {
-            minHeight: `${viewHeight}px`
+            minHeight: viewHeight
       }
 
       return (

@@ -5,6 +5,7 @@ import Socials from "../components/Socials"
 import Head from "next/head"
 
 const Header = ({children}) => {
+
       return (
             <div>
                   <Head>

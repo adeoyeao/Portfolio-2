@@ -4,11 +4,11 @@ import Header from "../layouts/Header"
 import ProjectsLayout from "../layouts/Projects"
 
 const Projects = () => {
-      const [ viewHeight, setViewHeight ] = useState()
+      const [ viewHeight, setViewHeight ] = useState(`100vh`)
       const [ projects , setProjects ] = useState([])
 
       const handleResize = () => {
-            setViewHeight(window.innerHeight)
+            setViewHeight(`${window.innerHeight}px`)
       }
 
       const fetcher = (...args) => 
@@ -34,7 +34,7 @@ const Projects = () => {
       }, [])
 
       const mainStyle = {
-            minHeight: `${viewHeight}px`
+            minHeight: viewHeight
       }
 
       return (

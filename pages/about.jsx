@@ -4,10 +4,10 @@ import Header from "../layouts/Header"
 import AboutLayout from "../layouts/About"
 
 const About = () => {
-      const [ viewHeight, setViewHeight ] = useState()
+      const [ viewHeight, setViewHeight ] = useState(`100vh`)
 
       const handleResize = () => {
-            setViewHeight(window.innerHeight)
+            setViewHeight(`${window.innerHeight}px`)
       }
 
       useEffect(() => {
@@ -19,7 +19,7 @@ const About = () => {
       }, [])
 
       const mainStyle = {
-            minHeight: `${viewHeight}px`
+            minHeight: viewHeight
       }
 
       return (

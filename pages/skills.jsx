@@ -4,7 +4,7 @@ import SkillsLayout from "../layouts/Skills"
 import useSWR from "swr"
 
 const Skills = () => {
-      const [ viewHeight, setViewHeight ] = useState()
+      const [ viewHeight, setViewHeight ] = useState(`100vh`)
       const [ skills, setSkills ] = useState([])
 
       const fetcher = (...args) => 
@@ -20,7 +20,7 @@ const Skills = () => {
       }
 
       const handleResize = () => {
-            setViewHeight(window.innerHeight)
+            setViewHeight(`${window.innerHeight}px`)
       }
 
       getStaticData()
@@ -35,7 +35,7 @@ const Skills = () => {
 
 
       const mainStyle = {
-            minHeight: `${viewHeight}px`
+            minHeight: viewHeight
       }
 
       return (
