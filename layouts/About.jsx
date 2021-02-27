@@ -38,6 +38,10 @@ const AboutLayout = () => {
                   name="View More Projects"/>
                   </div>
                   <div className={styles.carousel}> 
+                        <Job
+                        company="Insight Capital"
+                        job="Front End Developer"
+                        years="2021~" />
                         <Job 
                         company="Freelance"
                         job="Web Developer"
@@ -50,10 +54,6 @@ const AboutLayout = () => {
                         company="EY"
                         job="Project Manager"
                         years="2016-19"/>
-                        <Job 
-                        company="TradeRisks"
-                        job="Risk Analyst"
-                        years="2015-16"/>
                   </div>
             </section>
       )
