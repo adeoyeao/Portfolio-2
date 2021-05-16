@@ -1,35 +1,46 @@
 .navbar {
       display: grid;
-      padding: 1rem 0;
+      padding: 0 5vw;
       position: fixed;
       bottom: 0rem;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: 1fr repeat(3, auto);
+      grid-gap: 1.5rem;
+      align-self: center;
       width: 100%;
-      place-items: center;
-      background: #1c1c1c;
+      height: 4rem;
+      background:  #F7FBFF;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      align-items: center;
+      border-bottom: 2px solid #E5E5E5;
 
       span {
             display: grid;
             justify-items: center;
             cursor: pointer;
-            &:hover h4 {
-            color: #2352FA;
+            position: relative;
+            &::after {
+                  content: '';
+                  position: absolute;
+                  display: block;
+                  bottom: -23px;
+                  height: 2px;
+                  width: 0;
+                  background: #33ccff;
+                  transition: width 0.5s linear;
+            }
+            &:hover {
+                  color: #33ccff;
+                  font-weight: bold;
+                  &::after {
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        width: 2rem;
+                  }
             }
       }
 }
 
-@media screen and (min-width: 700px) {
-      .navbar {
-            position: relative;
-            top: 0;
-            grid-gap: 1.5rem;
-            background: none;
-      }
-}
 
-@media screen and (min-width: 1200px) {
-      .navbar {
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(5, 1fr);
-      }
-}

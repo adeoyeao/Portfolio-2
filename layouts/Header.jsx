@@ -1,7 +1,4 @@
-import styles from "../styles/layouts/header.module.scss"
-import Logo from "../components/Logo"
 import Navbar from "../components/Navbar"
-import Socials from "../components/Socials"
 import Head from "next/head"
 
 const Header = ({children}) => {
@@ -17,11 +14,7 @@ const Header = ({children}) => {
                         <title>Alfred Adeoye</title>
                         <link rel="icon" type="image/svg" href="/icons/favicon.svg" />
                   </Head>
-            <header className={styles.header}>
-                  <Logo />
                   <Navbar /> 
-                  <Socials />
-            </header>
             { children }
             </div>
       )

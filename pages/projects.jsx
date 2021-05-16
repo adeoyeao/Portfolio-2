@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react"
-import useSWR from "swr"
-import Header from "../layouts/Header"
 import ProjectsLayout from "../layouts/Projects"
 
 const Projects = () => {
@@ -10,20 +8,6 @@ const Projects = () => {
       const handleResize = () => {
             setViewHeight(`${window.innerHeight}px`)
       }
-
-      const fetcher = (...args) => 
-            fetch(...args)
-            .then(res => res.json())
-            .then(data => {
-                  setProjects(data.reverse())
-                  console.log(data)
-            })
-
-      const getStaticData = () => {
-            const { data, err } = useSWR("/projectdata", fetcher)
-      }
-
-      getStaticData()
 
       useEffect(() => {
             handleResize()
