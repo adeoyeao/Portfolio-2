@@ -5,6 +5,9 @@
       padding: 0;
       box-sizing: border-box;
       font-family: "Raleway", sans-serif;
+      &::-webkit-scrollbar {
+            display: none;
+      }
 }
 
 main {
@@ -27,7 +30,7 @@ h2,
 h3 {
       color: #202125;
       font-weight: 900;
-      font-family: "Raleway"
+      font-family: "Cabin"
 }
 
 h4 {
@@ -52,15 +55,16 @@ p {
       color: #202125;
       font-size: 14px;
       letter-spacing: 1px;
+      line-height: 24px;
 }
 
 @media screen and (min-width: 700px) {
       h1 {
-            font-size: 80px;
+            font-size: 72px;
       }
 
       h2 {
-            font-size: 64px;
+            font-size: 48px;
       }
 
       h3 {
@@ -69,6 +73,7 @@ p {
 
       p {
             font-size: 18px;
+            line-height: 32px;
       }
 
       section {
@@ -79,10 +84,13 @@ p {
 @media screen and (min-width: 1200px) {
       main {
             padding: 0;
-            padding-left: 4rem;
       }
 
       section {
             padding: 0 5vw;
+      }
+
+      p {
+            width: 90%;
       }
 }

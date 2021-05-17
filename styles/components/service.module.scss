@@ -1,0 +1,18 @@
+.service {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    background: #F7FBFF;
+    box-shadow: 0 0px 8px 4px rgba(0, 0, 0, 0.05);
+}
+
+.serviceIcon {
+    background: #33CCFF;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}

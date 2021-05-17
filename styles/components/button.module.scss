@@ -2,17 +2,18 @@
       margin-top: 1.5rem;
       font-size: 16px;
       border: none;
+      border-radius: 2rem;
       outline: none;
       appearance: none;
       padding: 1rem;
       cursor: pointer;
-      color: white;
-      background:  #06001C;
+      color: #F7FBFF;
+      background:  rgb(32, 33, 37);
+      width: 14rem;
       &:hover {
-            background: linear-gradient(90deg, #7b4397, #dc2430);
-            color: #06001C;
+            background: #33CCFF;
             font-weight: bold;
-            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3)
+            box-shadow: 0 1px 8px 4px rgba(32, 33, 37, 0.25);
       }
-      transition: font-weight 0.5s linear, color 0.5s linear;
+      transition: background 0.5s linear;
 }

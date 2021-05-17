@@ -4,7 +4,8 @@
       height: 2.5rem;
       place-items: center;
       justify-self: start;
-      background-color: F7FBFF;
+      background-color: #F7FBFF;
+      cursor: pointer;
 
       svg {
             grid-row: 1/2;
@@ -13,19 +14,7 @@
 
       svg {
             width: 80%;
-            stroke-dasharray: 100;
-            stroke-dashoffset: 100%;
-            animation: draw 5s ease-in-out alternate infinite;
             stroke: #202125;
-      }
-}
-
-@keyframes draw {
-      0% {
-            stroke-dashoffset: 100%;
-      }
-      100% {
-            stroke-dashoffset: 0%;
       }
 }
 

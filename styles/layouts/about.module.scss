@@ -1,61 +1,14 @@
 .about {
       display: grid;
-      align-items: center;
       grid-gap: 2rem;
       text-align: center;
-
-      .carousel {
-            width: 100%;
-            height: 250px;
-            position: relative;
-            overflow: hidden;
-
-            div {
-                  position: absolute;
-                  top: 300px;
-            }
-            div:nth-of-type(1) {
-                  animation: scroll 10s linear infinite;
-                  background: linear-gradient(90deg, #48c6ef , #6f86d6)
-            }
-            div:nth-of-type(2) {
-                  animation: scroll 10s 2.5s linear infinite;
-                  background: linear-gradient(90deg, #36d1dc , #5b86e5)
-            }
-            div:nth-of-type(3) {
-                  animation: scroll 10s 5.0s linear infinite;
-                  background: linear-gradient(90deg, #B7F8DB, #50A7C2)
-            }
-            div:nth-of-type(4) {
-                  animation: scroll 10s 7.5s linear infinite;
-                  background: linear-gradient(90deg, #a3bded , #6991c7)
-            }
-      }
-}
-
-@media screen and (min-width: 700px) {
-      .about {
-            grid-template-columns: 1fr 0.5fr;
-            text-align: left;
-            .carousel {
-                  div {
-                        right: 0;
-                  }
-            }
-      }
+      padding: 6rem 15vw;
+      text-align: left;
 }
 
 @media screen and (min-width: 700px) {
       .about {
             grid-template-columns: 1fr 1fr;
-      }
-}
-
-@keyframes scroll {
-      from {
-            top: 300px;
-      }
-      to {
-            top: -100%;
+            grid-gap: 6rem;
       }
 }

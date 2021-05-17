@@ -1,0 +1,18 @@
+.container {
+
+    border-radius: 1rem;
+    background: #E5E5E5;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    padding: 2rem;
+    margin-top: 4rem;
+
+    h2 {
+        margin: 0 !important;
+    }
+
+    button {
+        margin: 0 !important;
+    }
+}

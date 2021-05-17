@@ -15,13 +15,16 @@ const Navbar = () => {
                         <Logo />
                   </div>
                   <span onClick = {() => handleClick("/about")}>
-                        About Me
+                        About
+                  </span>
+                  <span onClick = {() => handleClick("/services")}>
+                        Services
                   </span>
                   <span onClick = {() => handleClick("/projects")} >
                         Projects
                   </span>
                   <span onClick = {() => handleClick("/contact")}>
-                        Contact Me
+                        Get in Touch
                   </span>
             </nav>
       )

@@ -1,9 +1,9 @@
 .navbar {
       display: grid;
-      padding: 0 5vw;
+      padding: 0 15vw;
       position: fixed;
       bottom: 0rem;
-      grid-template-columns: 1fr repeat(3, auto);
+      grid-template-columns: 1fr repeat(4, auto);
       grid-gap: 1.5rem;
       align-self: center;
       width: 100%;

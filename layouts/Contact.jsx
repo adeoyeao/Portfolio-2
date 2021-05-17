@@ -3,19 +3,9 @@ import styles from "../styles/layouts/contact.module.scss"
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
-import { useSelector, useDispatch } from "react-redux"
-import { pageEnter, pageExit } from "../redux/actions"
 import { useEffect } from "react"
 
 const ContactLayout = () => {
-      const dispatch = useDispatch()
-      
-      const shrink = useSelector(state => state.transition.shrink)
-      const shrinkStyle = shrink ? { transform: "scale(0.75, 0.75)" } : { transform: "unset" }
-
-      useEffect(() => { 
-            setTimeout(() => dispatch(pageEnter()), 1500)
-      }, [shrink])
 
       const iconStyle = {
             fontSize: 32,
@@ -26,7 +16,6 @@ const ContactLayout = () => {
 
       return (
             <section 
-            style={shrinkStyle}
             className={styles.contact}>
                   <div>
                   <Copy 
