@@ -8,7 +8,6 @@ import { useEffect } from "react"
 import styles from "../styles/layouts/about.module.scss"
 
 const AboutLayout = () => {
-
       return (
             <section 
             className={styles.about}>
