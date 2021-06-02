@@ -1,0 +1,15 @@
+.featuredProjects {
+    display: grid;
+    grid-gap: 2rem;
+    text-align: center;
+    padding: 0rem 15vw;
+    padding-bottom: 3rem;
+    text-align: left;
+}
+
+@media screen and (min-width: 700px) {
+    .featuredProjects {
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 3rem;
+    }
+}

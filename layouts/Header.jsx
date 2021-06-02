@@ -1,8 +1,34 @@
 import Navbar from "../components/Navbar"
 import Head from "next/head"
+import { Navigation } from 'aa-web-design-ui-kit'
+import { useRouter } from 'next/router' 
 
 const Header = ({children}) => {
-
+      const router = useRouter()
+      const Nav =                   <Navigation 
+      backgroundColor='white'
+      accentColor='blue'
+      paddingSide={10}
+      align='right'
+      activeLink='/'
+      links={[
+            {
+                  name: 'Services',
+                  route: 'services',
+                  onClick: () => router.push('services')
+            },
+            {
+                  name: 'Projects',
+                  route: 'projects',
+                  onClick: () => router.push('projects')
+            },
+      ]}
+      logo='/icons/logo.svg'
+      menu='/icons/hamburger.svg'
+      visible={true}
+      white='white'
+      black='black'
+/> 
       return (
             <div>
                   <Head>
@@ -14,7 +40,8 @@ const Header = ({children}) => {
                         <title>Alfred Adeoye</title>
                         <link rel="icon" type="image/svg" href="/icons/favicon.svg" />
                   </Head>
-                  <Navbar /> 
+                  <Navbar />
+                  {/* { Nav } */}
             { children }
             </div>
       )

@@ -3,6 +3,7 @@ import Service from '../components/Service'
 import Button from "../components/Button"
 import { useState, useEffect } from "react"
 import AboutLayout from './About'
+import FeaturedProjectsLayout from './FeaturedProjects'
 import styles from "../styles/layouts/index.module.scss"
 
 const IndexLayout = () => {
@@ -62,6 +63,7 @@ const IndexLayout = () => {
                   name='See How I Can Help'
                   />
             </section>
+            <FeaturedProjectsLayout />
             </>
       )
 }

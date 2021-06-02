@@ -1,0 +1,38 @@
+.projectcard {
+    border-radius: 1rem;
+    padding: 2rem;
+
+    &:hover {
+        box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    button {
+        border: none;
+        outline: none;
+        appearance: none;
+        cursor: pointer;
+        background: none;
+    }
+}
+
+.primary {
+    background: #F7FBFF;
+    color: #202125;
+}
+
+.secondary {
+    color: #F7FBFF;
+    background: #202125;
+
+    h2, p, button {
+        color: #F7FBFF;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .projectcard {
+        grid-column: 1/3;
+    }
+}
+
+
