@@ -3,7 +3,7 @@ import Heading from './Heading'
 import MobileScreenShareIcon from '@material-ui/icons/MobileScreenShare';
 import HttpIcon from '@material-ui/icons/Http';
 import SearchIcon from '@material-ui/icons/Search';
-import AppsIcon from '@material-ui/icons/Apps';
+import StorefrontIcon from '@material-ui/icons/Storefront';
 
 const Service = (props) => {
     const iconStyle = {
@@ -15,7 +15,7 @@ const Service = (props) => {
         design: <MobileScreenShareIcon style={iconStyle} />,
         development: <HttpIcon style={iconStyle}/>,
         optimisation: <SearchIcon style={iconStyle}/>,
-        apps: <AppsIcon style={iconStyle}/>
+        ecommerce: <StorefrontIcon style={iconStyle}/>
     }
 
     return (

@@ -1,6 +1,7 @@
 import Heading from "../components/Heading"
 import ProjectCard from '../components/ProjectCard'
 import styles from "../styles/layouts/featuredprojects.module.scss"
+import PROJECTS_DATA from '../data/projects.json'
 
 const FeaturedProjectsLayout = () => {
       return (
@@ -10,31 +11,16 @@ const FeaturedProjectsLayout = () => {
                   type='primary'
                   head='Featured Projects'
                   />
-                  <div/>
-                  <ProjectCard
-                  type='primary'
-                  head='Audiophile'
-                  text='Audio Products E-Commerce Website'
-                  imgUrl='./images/audiophile.jpg'
-                  />
-                  <ProjectCard
-                  type='secondary'
-                  head='Coffee Roasters'
-                  text='Subscription Service Website'
-                  imgUrl='./images/coffeeroasters.jpg'
-                  />
-                  <ProjectCard
-                  type='primary'
-                  head='Designo'
-                  text='Creative Agency Marketing Website'
-                  imgUrl='./images/designo.jpg'
-                  />
-                  <ProjectCard
-                  type='secondary'
-                  head='Dine'
-                  text='Restaurant Booking Website'
-                  imgUrl='./images/dine.jpg'
-                  />
+                  {
+                        PROJECTS_DATA.map(project => (
+                              <ProjectCard 
+                              head={project.name}
+                              text={project.description}
+                              imgUrl={`./images/${project.ref}/main.jpg`}
+                              route={`projects/${project.ref}`}
+                              />
+                        ))
+                  }
             </section>
       )
 }

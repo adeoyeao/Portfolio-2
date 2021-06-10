@@ -1,22 +1,24 @@
-.projects {
+.project {
   display: flex;
   flex-direction: column;
   grid-gap: 2rem;
   padding: 4rem 15vw;
 
-  button {
-    align-self: center;
+  a {
+    text-decoration: none;
+    color: #33CCFF;
+    font-weight: bold;
   }
 }
 
 @media screen and (min-width: 700px) {
-  .projects {
+  .project {
     padding: 6rem 15vw 4rem 15vw;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .projects {
+  .project {
     padding: 8rem 15vw 4rem 15vw;
   }
 }

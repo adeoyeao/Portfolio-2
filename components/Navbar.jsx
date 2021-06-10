@@ -83,12 +83,12 @@ const Navbar = () => {
               &:hover {
                   background: ${(props) => props.accentColor};
 
-                  button {
+                  button, a {
                       color: ${(props) => props.white};
                   }
               }
 
-              button {
+              button, a {
                   appearance: none;
                   outline: none;
                   border: none;
@@ -97,6 +97,7 @@ const Navbar = () => {
                   color: ${(props) => lighten(0.2, props.black)};
                   height: 100%;
                   width: 100%;
+                  text-decoration: none;
               }
           }
 
@@ -139,7 +140,7 @@ const Navbar = () => {
                   &:hover {
                       background: unset;
                       
-                      button {
+                      button, a {
                           color: ${(props) => lighten(0.2, props.accentColor)};
                       }
                   }
@@ -151,7 +152,7 @@ const Navbar = () => {
                       height: 4px;
                       background: ${(props) => lighten(0.2, props.accentColor)};
                       width: 0%;
-                      bottom: -26px;
+                      bottom: -19px;
                       transition: width 0.5s ease-in-out;
                   }
 
@@ -169,9 +170,8 @@ const Navbar = () => {
       paddingSide: 5,
       align: 'right',
       links: [
-            { name: 'Services', route: 'services'},
-            { name: 'Projects', route: 'projects'},
-            { name: 'Contact', route: 'contact'},
+            { name: 'Services', route: '/services'},
+            { name: 'Projects', route: '/projects'},
       ],
       menu: 'https://static.thenounproject.com/png/659803-200.png',
       visible: false,
@@ -200,6 +200,9 @@ const Navbar = () => {
                               >{link.name}</button>
                         </li>
                   )) }
+                  <li>
+                        <a href="mailto:alfred.adeoye@cantab.net?subject=Website Development Enquiry">Contact</a>
+                  </li>
                   </ul>
             </StyledNavigation>
       )

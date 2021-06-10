@@ -1,0 +1,37 @@
+.services {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2rem;
+    padding: 4rem 15vw;
+
+    .services_list {
+      margin-top: 1rem;
+      display: grid;
+      grid-gap: 3rem;
+      grid-template-rows: repeat(4, 1fr);
+    }
+
+    button {
+      align-self: center;
+    }
+  }
+  
+  @media screen and (min-width: 700px) {
+    .services {
+      padding: 6rem 15vw 4rem 15vw;
+
+      .services_list {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .services {
+      padding: 8rem 15vw 4rem 15vw;
+    }
+  }
+  
+  
+  

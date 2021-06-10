@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react"
+import ProjectsLayout from "../../layouts/Projects"
 
-import Header from "../layouts/Header"
-import ServicesLayout from "../layouts/Services"
-
-const About = () => {
+const Projects = () => {
       const [ viewHeight, setViewHeight ] = useState(`100vh`)
+      const [ projects , setProjects ] = useState([])
 
       const handleResize = () => {
             setViewHeight(`${window.innerHeight}px`)
@@ -24,9 +23,9 @@ const About = () => {
 
       return (
             <main style={mainStyle}>
-                  <ServicesLayout />
+                  <ProjectsLayout projects={projects}/>
             </main>
       )
 }
 
-export default About
+export default Projects

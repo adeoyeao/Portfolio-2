@@ -1,6 +1,5 @@
 import { urlObjectKeys } from 'next/dist/next-server/lib/utils'
 import { useRouter } from 'next/router'
-// import styles from "../styles/components/projectcard.module.scss"
 import styled from 'styled-components'
 import Copy from './Copy'
 import Paragraph from './Paragraph'

@@ -22,8 +22,27 @@ const IndexLayout = () => {
       }, [])
 
       const indexStyle = {
-            minHeight: viewHeight
+            height: viewHeight
       }
+
+      const services = [
+            {
+                  name: 'design',
+                  head: 'Responsive Design'
+            },
+            {
+                  name: 'development',
+                  head: 'Web Development'
+            },
+            {
+                  name: 'optimisation',
+                  head: 'SEO Optimisation'
+            },
+            {
+                  name: 'ecommerce',
+                  head: 'eCommerce Development'
+            }
+      ]
 
       return (
             <>
@@ -42,22 +61,12 @@ const IndexLayout = () => {
             </section>
             <AboutLayout/>
             <section className={styles.services}>
-                  <Service 
-                  service='design'
-                  head='Responsive Design'
-                  />
-                  <Service 
-                  service='development'
-                  head='Web Development'
-                  />
-                  <Service 
-                  service='optimisation'
-                  head='SEO Optimisation'
-                  />
-                  <Service 
-                  service='apps'
-                  head='eCommerce Development'
-                  />
+                  { services.map(service => (
+                        <Service
+                              service={service.name}
+                              head={service.head}
+                        />
+                  )) }
                   <Button 
                   route='services'
                   name='See How I Can Help'
