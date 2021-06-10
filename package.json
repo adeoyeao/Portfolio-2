@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server/app.js",
+    "dev": "next",
     "build": "next build",
-    "start": "NODE_ENV=production node server/app.js"
+    "start": "next start"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "aa-web-design-ui-kit": "latest",
     "express": "latest",
     "next": "latest",
+    "polished": "^4.1.2",
     "postcss": "latest",
     "react": "latest",
     "react-dom": "latest",
@@ -23,6 +24,7 @@
     "react-redux": "latest",
     "redux": "latest",
     "redux-thunk": "latest",
-    "sass": "latest"
+    "sass": "latest",
+    "styled-components": "^5.3.0"
   }
 }

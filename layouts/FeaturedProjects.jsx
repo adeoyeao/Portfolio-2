@@ -14,19 +14,26 @@ const FeaturedProjectsLayout = () => {
                   <ProjectCard
                   type='primary'
                   head='Audiophile'
+                  text='Audio Products E-Commerce Website'
+                  imgUrl='./images/audiophile.jpg'
                   />
                   <ProjectCard
                   type='secondary'
                   head='Coffee Roasters'
+                  text='Subscription Service Website'
+                  imgUrl='./images/coffeeroasters.jpg'
                   />
                   <ProjectCard
                   type='primary'
                   head='Designo'
+                  text='Creative Agency Marketing Website'
+                  imgUrl='./images/designo.jpg'
                   />
                   <ProjectCard
                   type='secondary'
                   head='Dine'
-                  text='Restaurant booking website'
+                  text='Restaurant Booking Website'
+                  imgUrl='./images/dine.jpg'
                   />
             </section>
       )
